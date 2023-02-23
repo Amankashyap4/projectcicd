@@ -23,7 +23,7 @@ on:
 
 
 jobs:
-  build:
+  ubuntu-build:
 
     runs-on: ubuntu-latest
 #    permissions:
@@ -34,8 +34,8 @@ jobs:
 #      id-token: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Use node.js 
+        uses: actions/checkout@v2
 
       - name: install node.js on ubuntu 
         run:  sudo apt-get install -y nodejs
@@ -48,7 +48,9 @@ jobs:
       
       - name: testing
         run: npm test
-      
+        env:
+          CI: true
+
              
     
     

@@ -45,9 +45,9 @@ jobs:
 
       - name: build package
         run: npm run build
-      
-#      - name: testing
         run: npm test
+#      - name: testing
+#        run: npm test
             
         env:
           CI: true

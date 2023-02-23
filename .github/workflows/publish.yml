@@ -40,9 +40,15 @@ jobs:
       - name: install node.js on ubuntu 
         run:  sudo apt-get install -y nodejs
             
-      - name: install angular on ubuntu
-        run:  sudo npm install -g @angular/cli
+      - name: install npm on ubuntu
+        run:  sudo npm install
 
       - name: build package
-        run: ng build
+        run: npm run build
+      
+      - name: testing
+        run: npm test
+      
+             
+    
     

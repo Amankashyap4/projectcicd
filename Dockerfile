@@ -1,0 +1,2 @@
+FROM node.js
+EXPOSE 8080

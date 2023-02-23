@@ -48,7 +48,7 @@ jobs:
       
       - name: testing
         run: npm test
-        run: ng serve
+             ng serve
         env:
           CI: true
 

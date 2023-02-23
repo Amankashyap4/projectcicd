@@ -1,2 +1,2 @@
-FROM node.js
+FROM node
 EXPOSE 8080

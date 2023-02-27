@@ -6,8 +6,7 @@ name: Docker
 # documentation.
 
 on:
-#  schedule:
-#    - cron: '45 10 * * *'
+
   push:
     branches: [ "master" ]
     # Publish semver tags as releases.
@@ -27,12 +26,7 @@ jobs:
   ubuntu-build:
     runs-on: ubuntu-latest
 #    runs-on: self-hosted
-#    permissions:
-#      contents: read
-#     packages: write
-      # This is used to complete the identity challenge
-      # with sigstore/fulcio when running outside of PRs.
-#      id-token: write
+#    
 
     strategy:
       matrix:
@@ -48,16 +42,7 @@ jobs:
       - run: npm install
       - run: npm run build --if-present
       
-      - run: npm test
-#      - name: install node.js on ubuntu 
-#        run:  sudo apt-get install -y nodejs
-#            
-#      - name: install npm on ubuntu
-#        run:  sudo npm install
-
-#      - name: build package
-#        run: npm run build
-#             npm test   
+#      - run: npm test
 #        env:
 #          CI: true
 

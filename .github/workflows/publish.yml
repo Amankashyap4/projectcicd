@@ -36,7 +36,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.14.x]
-        always-auth: true
+        always-auth: false
 
     steps:
       - uses: actions/checkout@v2

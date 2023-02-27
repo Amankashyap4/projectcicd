@@ -23,9 +23,9 @@ on:
 
 
 jobs:
-    build:
-#  ubuntu-build:   #initially mention
-     runs-on: self-hosted
+  build:
+    ubuntu-build:   #initially mention
+#     runs-on: self-hosted
 #    runs-on: ubuntu-latest
 #    permissions:
 #      contents: read

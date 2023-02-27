@@ -39,13 +39,13 @@ jobs:
         node-version: [18.14.2]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use node.js ${{ matrix.node-version }}
-      - uses: actions/setup-node@v1
-        with:
-            node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build
+    - uses: actions/checkout@v2
+    - name: Use node.js ${{ matrix.node-version }}
+    - uses: actions/setup-node@v1
+      with:
+          node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run build
 #      - run: npm test
 #      - name: install node.js on ubuntu 
 #        run:  sudo apt-get install -y nodejs
@@ -59,9 +59,9 @@ jobs:
 #        env:
 #          CI: true
 
-      - name: Build & Push Docker image
-      - uses: mr-smithers-excellent/docker-build-push@v3
-        with:
+    - name: Build & Push Docker image
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      with:
             image: amnkashyap/angular                                        #amnkashyap/angularproject
             tag: latest                                    #projectcicd
             registry: docker.io

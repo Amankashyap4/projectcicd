@@ -46,7 +46,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run build
+      - run: npm run 
+      - run: npm build
 #      - run: npm test
 #      - name: install node.js on ubuntu 
 #        run:  sudo apt-get install -y nodejs

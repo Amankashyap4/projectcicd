@@ -23,7 +23,8 @@ on:
 
 
 jobs:
-  ubuntu-build:
+   build:
+#  ubuntu-build:   #initially mention
      runs-on: self-hosted
 #    runs-on: ubuntu-latest
 #    permissions:
